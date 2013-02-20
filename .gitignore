@@ -1,0 +1,9 @@
+.gradle/
+build/
+src/main/bin/
+src/main/gen/
+src/main/libs/
+src/main/.classpath
+src/main/.project
+src/main/project.properties
+local.properties
