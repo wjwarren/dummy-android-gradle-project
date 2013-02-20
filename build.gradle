@@ -1,0 +1,60 @@
+group = "nl.ansuz"
+version = "0.1"
+
+apply plugin: "java"
+apply plugin: "git-dependencies"
+apply plugin: "android"
+
+task wrapper(type: Wrapper) {
+    gradleVersion = "1.2"
+}
+
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath "com.android.tools.build:gradle:0.2"
+		classpath "org.batcha.gradle.plugins:git-dependencies:0.1"
+	}
+}
+
+android {
+	target = "android-16"
+	
+	defaultConfig {
+		versionCode = 1
+		versionName = "0.1"
+		
+		minSdkVersion = 8
+		targetSdkVersion = 16
+	}
+
+	sourceSets {
+		main {
+			manifest {
+				srcFile "src/main/AndroidManifest.xml"
+			}
+			java {
+				srcDir "src/main/src"
+			}
+			res {
+				srcDir "src/main/res"
+			}
+			assets {
+				srcDir "src/main/assets"
+			}
+			resources {
+				srcDir "src/main/src"
+			}
+		}
+	}
+	
+	repositories {
+		mavenCentral()
+	}
+	
+	dependencies {
+		compile("org.batcha:dummy-project-a:4.2").ext.git = "https://github.com/bat-cha/dummy-java-project-a.git"
+	}
+}
