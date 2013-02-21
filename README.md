@@ -5,6 +5,7 @@ Test project to experiment with Gradle for Android.
 
 ##Usage
 1. [Install the Android SDK](http://developer.android.com/sdk/index.html).
+1. Install the correct API version using the [Android SDK Manager](http://developer.android.com/tools/help/sdk-manager.html).
 1. Make sure the Android SDK can be found by either:
   1. Adding a "local.properties" file with a "sdk.dir" property pointing to the installation folder of the Android SDK in the root of this project OR
   2. Setting the ANDROID_HOME system variable to point to the Android SDK installation folder.
