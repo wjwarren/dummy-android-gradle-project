@@ -2,7 +2,6 @@ group = "nl.ansuz"
 version = "0.1"
 
 apply plugin: "java"
-apply plugin: "git-dependencies"
 apply plugin: "android"
 
 task wrapper(type: Wrapper) {
@@ -52,9 +51,11 @@ android {
 	
 	repositories {
 		mavenCentral()
+		mavenLocal()
 	}
 	
 	dependencies {
-		compile("org.batcha:dummy-project-a:4.2").ext.git = "https://github.com/bat-cha/dummy-java-project-a.git"
+		compile("org.batcha:dummy-project-a:4.2")
 	}
 }
+

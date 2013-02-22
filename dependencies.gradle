@@ -1,0 +1,18 @@
+group = "nl.ansuz"
+version = "0.1"
+
+apply plugin: "java"
+apply plugin: "git-dependencies"
+
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath "org.batcha.gradle.plugins:git-dependencies:0.1"
+	}
+}
+
+dependencies {
+	compile("org.batcha:dummy-project-a:4.2").ext.git = "https://github.com/bat-cha/dummy-java-project-a.git"
+}
