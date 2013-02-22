@@ -2,6 +2,7 @@ dummy-android-gradle-project
 ============================
 
 Test project to experiment with Gradle for Android.
+(Includes a work-around to make an Android Gradle project rely on Git dependencies.)
 
 ##Usage
 1. [Install the Android SDK](http://developer.android.com/sdk/index.html).
@@ -9,6 +10,7 @@ Test project to experiment with Gradle for Android.
 1. Make sure the Android SDK can be found by either:
   1. Adding a "local.properties" file with a "sdk.dir" property pointing to the installation folder of the Android SDK in the root of this project OR
   2. Setting the ANDROID_HOME system variable to point to the Android SDK installation folder.
+1. Run `gradle -b dependencies.gradle resolveGitDependencies`.
 1. Run `gradle build`.
 
 ##References
